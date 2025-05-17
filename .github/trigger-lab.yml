@@ -4,12 +4,12 @@ run-name: "${{ github.actor }}'s Example2 Workflow Run"
 
 on:
   push:
-    branches: [main]  
+    branches: [main]
   pull_request:
-    types: [opened, synchronize]  
-  workflow_dispatch: 
+    types: [opened, synchronize]
+  workflow_dispatch:
   schedule:
-    - cron: '0 9 * * 1'  
+    - cron: '0 9 * * 1'
     - cron: '*/2 * * * *'
 
 jobs:
@@ -17,4 +17,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print trigger
-        run: echo "Triggered by: ${{ github.event_name }}"
+        run: 'echo "Triggered by: ${{ github.event_name }}"'
