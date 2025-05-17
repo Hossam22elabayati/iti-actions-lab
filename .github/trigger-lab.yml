@@ -10,6 +10,7 @@ on:
   workflow_dispatch: 
   schedule:
     - cron: '0 9 * * 1'  
+    - cron: '*/2 * * * *'
 
 jobs:
   show-trigger:
